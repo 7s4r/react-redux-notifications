@@ -1,0 +1,65 @@
+{
+  "name": "react-redux-notifications",
+  "version": "0.0.1",
+  "description": "A simple react redux isomorphic notifications system",
+  "main": "lib/index.js",
+  "author": "Gueorgui AGAPOV",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7s4r/react-redux-notifications.git"
+  },
+  "bugs": {
+    "url": "https://github.com/7s4r/react-redux-notifications/issues"
+  },
+  "homepage": "https://github.com/7s4r/react-redux-notifications#readme",
+  "keywords": [
+    "react",
+    "redux",
+    "notifications",
+    "notification",
+    "notify",
+    "isomorphic",
+    "universal",
+    "ssr",
+    "component",
+    "webpack"
+  ],
+  "scripts": {
+    "start": "node .",
+    "dev": "concurrently --kill-others 'nodemon --watch src' 'node webpack/webpack-dev-server'",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "lint:css": "stylelint 'src/components/**/*.js'",
+    "test": "jest",
+    "build": "NODE_ENV=production webpack --config webpack/webpack.config"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0",
+    "react-redux": "^4.0.0 || ^5.0.0",
+    "redux": "^3.0.0",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^18.0.0",
+    "babel-loader": "^6.3.2",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "jest": "^18.1.0",
+    "react": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "react-addons-css-transition-group": "^15.4.2",
+    "styled-components": "^1.4.3"
+  }
+}
