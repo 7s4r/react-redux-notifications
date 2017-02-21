@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
+import { AppContainer } from 'react-hot-loader'
 import { createStore, compose, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
@@ -13,8 +14,10 @@ const store = createStoreWithMiddleware(combineReducers({
 }), {})
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>
-  , document.getElementById('root')
+  <AppContainer>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </AppContainer>,
+  document.getElementById('root')
 )

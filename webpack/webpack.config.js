@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const ip = process.env.IP || '0.0.0.0'
 const port = (+process.env.PORT + 1) || 3001
@@ -9,10 +10,10 @@ const config = {
   devtool: DEBUG ? 'eval' : false,
   entry: [
     'babel-polyfill',
-    path.join(__dirname, '../src/index'),
+    path.join(__dirname, '../src/client'),
   ],
   output: {
-    path: path.join(__dirname, '../lib'),
+    path: path.join(__dirname, DEBUG ? '../dist' : '../lib'),
     filename: 'app.[hash].js',
     publicPath: DEBUG ? `http://${ip}:${port}/` : '/',
   },
@@ -40,6 +41,9 @@ if (DEBUG) {
 
   config.plugins = config.plugins.concat([
     new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, '../public/index.html'),
+    }),
   ])
 } else {
   config.plugins = config.plugins.concat([
