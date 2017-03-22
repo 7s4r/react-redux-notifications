@@ -4,20 +4,21 @@
     "airbnb"
   ],
   "env": {
-    "browser": true,
     "node": true,
     "jest": true
   },
   "rules": {
-    "comma-dangle": ["error", "always-multiline"],
     "semi": [2, "never"],
+    "comma-dangle": ["error", "always-multiline"],
     "no-console": ["error", { "allow": ["warn", "error", "info"] }],
     "max-len": 0,
     "no-shadow": 0,
     "jsx-quotes": [2, "prefer-double"],
     "react/forbid-prop-types": 0,
     "react/require-default-props": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "newline-after-var": "error",
+    "newline-before-return": "error"
   },
   "settings": {
     "import/resolver": {

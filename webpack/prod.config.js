@@ -9,7 +9,7 @@ const plugins = [
 module.exports = require('./base.config')({
   entry: [
     'babel-polyfill',
-    path.resolve(process.cwd(), 'src/index.js'),
+    path.resolve(process.cwd(), 'src/lib.js'),
   ],
   output: {
     filename: 'index.js',

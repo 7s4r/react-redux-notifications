@@ -2,16 +2,11 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { AppContainer } from 'react-hot-loader'
-import { createStore, compose, combineReducers, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
+import configureStore from './store/configure'
 
-import { reducer as notificationsReducer } from './'
 import App from './components/App'
 
-const createStoreWithMiddleware = compose(applyMiddleware(thunk))(createStore)
-const store = createStoreWithMiddleware(combineReducers({
-  notifications: notificationsReducer(),
-}), {})
+const store = configureStore()
 
 render(
   <AppContainer>

@@ -25,7 +25,7 @@
     "webpack"
   ],
   "scripts": {
-    "start": "node .",
+    "start": "node src/server",
     "test": "jest",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
@@ -66,8 +66,6 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
-    "babel-jest": "^19.0.0",
-    "jest": "^19.0.2",
     "react-addons-css-transition-group": "^15.4.2",
     "styled-components": "^1.4.3"
   }
